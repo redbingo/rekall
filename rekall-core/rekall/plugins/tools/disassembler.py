@@ -227,7 +227,7 @@ class CapstoneInstruction(Instruction):
         if self.mnemonic[0] == "j":
             operand = self.operands[0]
             if operand["type"] in ("IMM", "MEM"):
-                return operand.get("address")
+                return operand.get("target")
 
             # We can not determine the target of REG jumps without the
             # registers.
